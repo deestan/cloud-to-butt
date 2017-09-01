@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
-	"name": "Cloud To Butt",
+	"name": "Rich Ad Experience Enhancer",
 	"version": "1.0",
-	"description": "Replaces the text 'the cloud' with 'my butt'.",
+	"description": "Translates marketing bullshit phrasing to more honest sentences.",
 	"content_scripts": 
 	[
 		{
@@ -12,4 +12,3 @@
 		}
 	]
 }
-

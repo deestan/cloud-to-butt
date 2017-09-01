@@ -7,8 +7,9 @@ function walk(node)
 	
 	var child, next;
 	
-	if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-	    || node.classList.indexOf('ace_editor') > -1) {
+	if (   (node.tagName && node.tagName.toLowerCase() == 'input')
+		|| (node.tagName && node.tagName.toLowerCase() == 'textarea')
+	    || Array(node.classList).indexOf('ace_editor') > -1) {
 		return;
 	}
 
@@ -36,12 +37,20 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	v = v.replace(/\ban enhanced\b/g, "a disgusting");
+	v = v.replace(/\bAn enhanced\b/g, "A disgusting");
+	v = v.replace(/\benhanced\b/g, "disgusting");
+	v = v.replace(/\bEnhanced\b/g, "Disgusting");
+	v = v.replace(/\binteractive\b/g, "annoying");
+	v = v.replace(/\bInteractive\b/g, "Annoying");
+	v = v.replace(/\brich\b/g, "shitty");
+	v = v.replace(/\bRich\b/g, "Shitty");
+	v = v.replace(/\bsolution\b/g, "hack");
+	v = v.replace(/\bSolution\b/g, "Hack");
+	v = v.replace(/\ban experience\b/g, "a bullshit");
+	v = v.replace(/\bAn experience\b/g, "A bullshit");
+	v = v.replace(/\bexperience\b/g, "bullshit");
+	v = v.replace(/\bExperience\b/g, "Bullshit");
 	
 	textNode.nodeValue = v;
 }
-
-
